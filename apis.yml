@@ -1,8 +1,32 @@
 aid: concord-systems
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/concord-systems.png
 name: Concord Systems
-description: Concord Systems is a company surfaced as a portfolio company of bloomberg-beta and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Concord Systems was a Brooklyn, New York stream-processing company founded in
+  December 2014 by Alexander Gallego and Emilio Del Tesoro, and backed by Bloomberg
+  Beta. It built a high-performance distributed stream processing framework written
+  in C++ on top of Apache Mesos, aimed at letting application developers and data
+  scientists write real-time streaming computations ("operators") in the language of
+  their choice — Python, Ruby, Go, Java/Scala, Node.js or Haskell — with Kafka and
+  Amazon Kinesis connectors and a CLI for deploying topologies. Akamai Technologies
+  acquired the company in an all-cash transaction in September 2016 and folded the
+  technology into its IoT edge data platform for real-time messaging and log
+  processing. The company is discontinued: concord.io is parked and the documentation
+  site is gone. Its interface was a Thrift-based operator driver API rather than an
+  HTTP/REST API, so there is no OpenAPI or event surface to catalog; the surviving
+  first-party developer artifacts are the github.com/concord organization and the
+  client libraries still published on PyPI, RubyGems and pkg.go.dev.
 url: https://raw.githubusercontent.com/api-evangelist/concord-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +34,50 @@ x-backed-by:
 - bloomberg-beta
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: Akamai Technologies
+x-acquired-date: '2016-09-23'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Stream Processing
+- Real Time
+- Data Processing
+- Big Data
+- Distributed Systems
+- Apache Mesos
+- Kafka
+- Open Source
+- Discontinued
 apis: []
+common:
+- type: GitHubOrganization
+  name: GitHub Organization
+  url: https://github.com/concord
+- type: Packages
+  name: Packages
+  url: packages/concord-systems-packages.yml
+- type: SDKs
+  name: SDKs
+  url: packages/concord-systems-packages.yml
+- type: CLI
+  name: CLI
+  url: cli/concord-systems-cli.yml
+- type: Lifecycle
+  name: Lifecycle
+  url: lifecycle/concord-systems-lifecycle.yml
+- type: LLMsTxt
+  name: llms.txt
+  url: llms/concord-systems-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

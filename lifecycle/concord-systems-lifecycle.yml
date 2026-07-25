@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/concord
+status: discontinued
+summary: >-
+  Concord Systems (Brooklyn, NY; founded December 2014 by Alexander Gallego and
+  Emilio Del Tesoro) built a high-performance distributed stream processing
+  framework in C++ on Apache Mesos. It was acquired by Akamai Technologies in
+  September 2016 and the product was folded into Akamai's IoT edge data platform.
+  The concord.io domain no longer belongs to the company (parked / listed for sale
+  via GoDaddy) and the developer documentation at concord.io/docs is gone. The only
+  surviving first-party developer surface is the github.com/concord organization
+  and the client libraries still published on PyPI, RubyGems and pkg.go.dev.
+acquisition:
+  acquirer: Akamai Technologies
+  announced: '2016-09-28'
+  closed: '2016-09-23'
+  terms: all-cash
+  sources:
+    - https://www.bloomberg.com/profile/company/1445799D:US
+    - https://www.akamai.com/newsroom/press-release/akamai-acquires-data-processing-provider-concord-systems
+  note: >-
+    The Akamai press-release URL now redirects to the newsroom index (no longer
+    served); the acquisition is corroborated by the Bloomberg company profile.
+versioning:
+  scheme: semver
+  current: 0.3.6
+  evidence: concord-py 0.3.6 (2016-07-21), concord-ruby 0.3.6 (2016-03-18)
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No published deprecation policy. The whole product was discontinued on
+    acquisition rather than formally deprecated.
+sla: null
+status_page: null
+last_release: '2016-07-21'
+api_surface:
+  type: thrift-rpc
+  note: >-
+    Concord exposed a Thrift-based computation/operator driver interface consumed
+    by the per-language client libraries, not an HTTP/REST API. There is no OpenAPI,
+    no public baseURL, and no event/webhook surface to harvest — which is why the
+    openapi/, asyncapi/, errors/, scopes/, authentication/, conventions/,
+    data-model/ and skills/ artifacts are absent rather than empty.
+probes_skipped:
+  - artifact: security/concord-systems-domain-security.yml
+    reason: >-
+      concord.io is no longer controlled by Concord Systems (GoDaddy parked page);
+      probing it would record the parking host's TLS/DNS posture, not the company's.
+  - artifact: well-known/
+    reason: no company-controlled host remains to probe

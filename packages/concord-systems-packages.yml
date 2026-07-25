@@ -1,0 +1,94 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/concord
+notes: >-
+  Concord Systems was acquired by Akamai Technologies in September 2016 and the
+  concord.io domain is now parked/for-sale. The packages below are the company's
+  original first-party client libraries. Those with a registry entry were verified
+  live on PyPI / RubyGems / pkg.go.dev; the remainder exist only as source in the
+  github.com/concord organization and are recorded as source-only. All are
+  unmaintained (last releases 2015-2016).
+status: unmaintained
+packages:
+  - language: python
+    registry: pypi
+    name: concord-py
+    url: https://pypi.org/project/concord-py/
+    install: pip install concord-py
+    version: 0.3.6
+    released: '2016-07-21'
+    source: https://github.com/concord/concord-py
+    description: concord.io python client library
+    publisher: concord systems <hi@concord.io>
+    official: true
+  - language: python
+    registry: pypi
+    name: concord
+    url: https://pypi.org/project/concord/
+    install: pip install concord
+    version: 0.2.9
+    source: https://github.com/concord/cmd
+    description: python concord command line tools
+    publisher: Concord Systems <support@concord.io>
+    kind: cli
+    official: true
+  - language: ruby
+    registry: rubygems
+    name: concord-ruby
+    url: https://rubygems.org/gems/concord-ruby
+    install: gem install concord-ruby
+    version: 0.3.6
+    released: '2016-03-18'
+    downloads: 45505
+    source: https://github.com/concord/concord-ruby
+    description: ruby client library for concord operators
+    publisher: Cole Brown, Alex Gallego, Rob Blafford
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/concord/concord-go
+    url: https://pkg.go.dev/github.com/concord/concord-go
+    install: go get github.com/concord/concord-go
+    source: https://github.com/concord/concord-go
+    description: Concord Go(lang) client
+    official: true
+source_only:
+  - language: java
+    name: concord-jvm
+    source: https://github.com/concord/concord-jvm
+    description: Java and Scala client libraries for Concord
+    official: true
+    registry: null
+  - language: javascript
+    name: concord-node
+    source: https://github.com/concord/concord-node
+    description: nodejs driver for concord.io
+    official: true
+    registry: null
+    note: >-
+      package.json declares name "concord", but the npm package of that name is
+      published by an unrelated author — the driver was never published to npm.
+  - language: haskell
+    name: concord-haskell
+    source: https://github.com/concord/concord-haskell
+    description: Haskell driver for Concord
+    official: true
+    registry: null
+  - language: java
+    name: concord-kinesis
+    source: https://github.com/concord/concord-kinesis
+    description: A Kinesis consumer for Concord
+    official: true
+    registry: null
+not_first_party:
+  - registry: rubygems
+    name: concord
+    url: https://rubygems.org/gems/concord
+    note: unrelated gem by Markus Schirp (object composition helper)
+  - registry: npm
+    name: concord
+    url: https://www.npmjs.com/package/concord
+    note: unrelated package (TypeScript interface to client/server code)
+  - registry: maven-central
+    name: com.walmartlabs.concord
+    note: unrelated Walmart Labs Concord workflow engine

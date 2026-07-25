@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/concord/cmd
+name: concord
+description: >-
+  First-party command line interface for the Concord stream processor — deploys and
+  manages operators (computations) on a Concord/Mesos cluster. Designed to also run
+  as a DC/OS CLI subcommand. Unmaintained since the 2016 Akamai acquisition.
+status: unmaintained
+install:
+  - method: pip
+    command: pip install concord
+    registry: https://pypi.org/project/concord/
+usage: concord [-h] [--info] [--version] subcommand [suboptions ...]
+commands:
+  - name: deploy
+    description: Deploy concord operators
+  - name: runway
+    description: Deploy prebuilt operators/connectors from the runway repository
+    related: https://github.com/concord/runway
+  - name: kill
+    description: Launch interactive session to browse and kill operators
+  - name: graph
+    description: Create a graphical representation of the current topology
+  - name: marathon
+    description: Create a marathon application from given parameters
+  - name: config
+    description: Set global CLI defaults
+flags:
+  - flag: -h, --help
+    description: Show help message
+  - flag: --info
+    description: Information about this CLI
+  - flag: --version
+    description: Version info
+integrations:
+  - name: DC/OS CLI
+    description: >-
+      Intended to be invoked through the DC/OS CLI; the README notes the Concord
+      DC/OS CLI was not supported at time of writing even though a PyPI build existed.
+docs:
+  - url: http://concord.io/docs/tutorials/cli.html
+    status: dead
+    note: concord.io is parked/for-sale following the Akamai acquisition
+package: packages/concord-systems-packages.yml

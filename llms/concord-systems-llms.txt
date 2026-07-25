@@ -1,0 +1,43 @@
+# Concord Systems
+
+> Concord Systems built a high-performance distributed stream processing framework
+> written in C++ on Apache Mesos, with per-language client libraries for writing
+> streaming computations ("operators"). Founded in Brooklyn, NY in December 2014 by
+> Alexander Gallego and Emilio Del Tesoro; acquired by Akamai Technologies in
+> September 2016 and folded into Akamai's IoT edge data platform. The company is
+> discontinued: concord.io is parked and the documentation site is gone. This
+> profile catalogs the surviving first-party developer artifacts.
+
+Status: discontinued (acquired by Akamai Technologies, September 2016)
+Interface: Thrift-based operator/computation driver API — not an HTTP/REST API.
+No OpenAPI, no public base URL, no webhook or event surface exists to catalog.
+
+## Source
+
+- [github.com/concord](https://github.com/concord): The company's GitHub organization — 22 repositories, including the stream processor, client drivers, CLI, and demos.
+- [getting-started](https://github.com/concord/getting-started): Demo clients and a Vagrant environment for running Concord computations.
+- [runway](https://github.com/concord/runway): Open source operators and templates for the Concord Stream Processor.
+
+## Client libraries
+
+- [concord-py](https://pypi.org/project/concord-py/): Python client library (PyPI, 0.3.6, 2016-07-21).
+- [concord-ruby](https://rubygems.org/gems/concord-ruby): Ruby client library for Concord operators (RubyGems, 0.3.6, 2016-03-18).
+- [concord-go](https://pkg.go.dev/github.com/concord/concord-go): Go client.
+- [concord-jvm](https://github.com/concord/concord-jvm): Java and Scala client libraries (source only, never published to Maven Central).
+- [concord-node](https://github.com/concord/concord-node): Node.js driver (source only, never published to npm).
+- [concord-haskell](https://github.com/concord/concord-haskell): Haskell driver (source only).
+
+## CLI
+
+- [concord](https://pypi.org/project/concord/): First-party CLI — `pip install concord`. Subcommands: deploy, runway, kill, graph, marathon, config. Also intended for use through the DC/OS CLI.
+
+## Integrations
+
+- [concord-kafka](https://github.com/concord/concord-kafka): Kafka integration built on librdkafka.
+- [concord-kinesis](https://github.com/concord/concord-kinesis): Amazon Kinesis consumer for Concord.
+
+## Artifacts in this profile
+
+- packages/concord-systems-packages.yml: Verified first-party packages and source-only drivers.
+- cli/concord-systems-cli.yml: The `concord` CLI command surface.
+- lifecycle/concord-systems-lifecycle.yml: Discontinuation, acquisition, and versioning record.
